@@ -689,3 +689,193 @@ footer {
   left: 24px;
   z-index: 3;
 }
+
+
+/* =============================================
+   RESPONSIVE DESIGN — TABLET (max 900px)
+   ============================================= */
+@media (max-width: 900px) {
+
+  /* Navbar */
+  nav {
+    padding: 14px 20px;
+  }
+  .nav-logo {
+    font-size: 18px;
+  }
+  .nav-links-left, .nav-links-right {
+    gap: 16px;
+  }
+
+  /* Hero: untereinander statt nebeneinander */
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vh auto;
+    height: auto;
+  }
+
+  .hero-left {
+    height: 60vh;
+  }
+
+  .hero-content {
+    padding: 40px 24px;
+    border-left: none;
+    border-top: 1px solid var(--grau-mid);
+  }
+
+  .hero-title {
+    font-size: clamp(64px, 16vw, 120px);
+  }
+
+  /* Produkte: 2 Spalten */
+  .produkt-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Behind: untereinander */
+  .behind-section {
+    grid-template-columns: 1fr;
+  }
+
+  .behind-text {
+    border-right: none;
+    border-bottom: 1px solid var(--grau-mid);
+    padding: 48px 32px;
+  }
+
+  .behind-video-wrap {
+    min-height: 50vh;
+  }
+
+  /* Footer */
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+
+/* =============================================
+   RESPONSIVE DESIGN — MOBIL (max 600px)
+   ============================================= */
+@media (max-width: 600px) {
+
+  /* Navbar: Logo zentriert, Links kleiner */
+  nav {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .nav-logo {
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links-left a, .nav-links-right a {
+    font-size: 10px;
+  }
+
+  .nav-links-left {
+    gap: 12px;
+  }
+
+  .nav-links-right {
+    gap: 12px;
+  }
+
+  /* Hero */
+  .hero {
+    grid-template-rows: 55vh auto;
+  }
+
+  .hero-left {
+    height: 55vh;
+  }
+
+  .hero-content {
+    padding: 32px 20px 40px;
+  }
+
+  .hero-tag {
+    font-size: 10px;
+  }
+
+  .hero-title {
+    font-size: clamp(56px, 18vw, 100px);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    margin-top: 16px;
+  }
+
+  .hero-cta {
+    margin-top: 24px;
+    font-size: 11px;
+    padding: 10px 20px;
+  }
+
+  /* Ticker */
+  .ticker-inner {
+    font-size: 11px;
+    gap: 20px;
+  }
+
+  /* Produkte: 1 Spalte auf kleinen Handys */
+  .produkte-section {
+    padding: 48px 16px;
+  }
+
+  .section-header h2 {
+    font-size: 44px;
+  }
+
+  .produkt-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .karte-info {
+    padding: 16px;
+  }
+
+  .karte h3 {
+    font-size: 28px;
+  }
+
+  /* Behind */
+  .behind-text {
+    padding: 36px 20px;
+  }
+
+  .behind-text h2 {
+    font-size: 40px;
+  }
+
+  .behind-video-wrap {
+    min-height: 60vw;
+  }
+
+  /* Warenkorb Panel full-width auf Handy */
+  #warenkorb-panel {
+    width: 100%;
+    right: -100%;
+  }
+
+  /* Footer */
+  footer {
+    padding: 36px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+  }
+
+  .footer-links {
+    gap: 12px;
+    font-size: 10px;
+  }
+}
