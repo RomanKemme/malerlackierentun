@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>malerlackierentun — voll psychose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Barlow+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- WARENKORB PANEL -->
+  <div id="warenkorb-panel">
+    <div id="panel-header">
+      <span>WARENKORB</span>
+      <button id="schliessen-btn">✕</button>
+    </div>
+    <div id="panel-inhalt">
+      <p class="leer-text">noch nix drin.</p>
+    </div>
+    <div id="panel-footer">
+      <div class="gesamt-zeile">
+        <span>GESAMT</span>
+        <strong id="gesamt-preis">0,00 €</strong>
+      </div>
+      <button id="checkout-btn">ZUR KASSE →</button>
+    </div>
+  </div>
+  <div id="overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-links-left">
+      <a href="#produkte">SHOP</a>
+      <a href="#behind">BEHIND</a>
+    </div>
+    <div class="nav-logo">malerlackierentun</div>
+    <div class="nav-links-right">
+      <a href="#">KONTAKT</a>
+      <span id="warenkorb-icon">BAG (<span id="anzahl">0</span>)</span>
+    </div>
+  </nav>
+
+  <!-- HERO mit Video -->
+  <section class="hero">
+    <!-- LINKE SEITE: Video -->
+    <div class="hero-left">
+      <video id="hero-video" class="hero-video" autoplay muted playsinline loop preload="auto">
+        <source src="video_1.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+      <div class="video-dots">
+        <span class="dot active" data-video="video_1.mp4"></span>
+        <span class="dot" data-video="video_2.mp4"></span>
+      </div>
+    </div>
+
+    <!-- RECHTE SEITE: Text -->
+    <div class="hero-content">
+      <div class="hero-tag">REGENSBURG · SEIT 2025</div>
+      <h1 class="hero-title">VOLL<br><span class="outline">PSYCHOSE</span></h1>
+      <p class="hero-sub">drei teile. ein print.</p>
+      <a href="#produkte" class="hero-cta">KOLLECTION ANSEHEN ↓</a>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>VOLL PSYCHOSE</span><span class="sep">✶</span>
+      <span>DREI TEILE</span><span class="sep">✶</span>
+      <span>REGENSBURG 2025</span><span class="sep">✶</span>
+      <span>ORGANIC COTTON</span><span class="sep">✶</span>
+      <span>MADE IN GERMANY</span><span class="sep">✶</span>
+      <span>GRAFFITI PRINT</span><span class="sep">✶</span>
+      <span>VOLL PSYCHOSE</span><span class="sep">✶</span>
+      <span>DREI TEILE</span><span class="sep">✶</span>
+      <span>REGENSBURG 2025</span><span class="sep">✶</span>
+      <span>ORGANIC COTTON</span><span class="sep">✶</span>
+      <span>MADE IN GERMANY</span><span class="sep">✶</span>
+      <span>GRAFFITI PRINT</span><span class="sep">✶</span>
+    </div>
+  </div>
+
+  <!-- PRODUKTE -->
+  <section class="produkte-section" id="produkte">
+    <div class="section-header">
+      <h2>DIE DREI TEILE</h2>
+      <p>limitiert. weil weniger manchmal mehr ist.</p>
+    </div>
+
+    <div class="produkt-grid">
+
+      <div class="karte" data-index="0">
+        <div class="karte-bild-wrap">
+          <div class="karte-bild hoodie-bg">
+            <div class="graffiti-mock">
+              <span class="gm-brand">malerlackierentun</span>
+              <span class="gm-main">VOLL<br>PSYCHOSE</span>
+              <span class="gm-sub">— HOODIE —</span>
+            </div>
+          </div>
+          <div class="karte-badge">LIMITED</div>
+        </div>
+        <div class="karte-info">
+          <div class="karte-meta">
+            <span class="karte-kat">HOODIE</span>
+            <span class="karte-nr">#001</span>
+          </div>
+          <h3>Basic Hoodie</h3>
+          <p class="karte-desc">schwerer baumwoll-fleece. oversized fit. voll psychose print auf der brust.</p>
+          <div class="karte-footer">
+            <span class="preis">59,99 €</span>
+            <button class="add-btn" data-name="Basic Hoodie" data-preis="59.99">IN DEN BAG +</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="karte featured" data-index="1">
+        <div class="karte-bild-wrap">
+          <div class="karte-bild shirt-bg">
+            <div class="graffiti-mock">
+              <span class="gm-brand">malerlackierentun</span>
+              <span class="gm-main">VOLL<br>PSYCHOSE</span>
+              <span class="gm-sub">— T-SHIRT —</span>
+            </div>
+          </div>
+          <div class="karte-badge bestseller">BESTSELLER</div>
+        </div>
+        <div class="karte-info">
+          <div class="karte-meta">
+            <span class="karte-kat">T-SHIRT</span>
+            <span class="karte-nr">#002</span>
+          </div>
+          <h3>Basic Shirt</h3>
+          <p class="karte-desc">100% organic cotton. regular fit. der gleiche print. weniger stoff, gleicher vibe.</p>
+          <div class="karte-footer">
+            <span class="preis">34,99 €</span>
+            <button class="add-btn" data-name="Basic Shirt" data-preis="34.99">IN DEN BAG +</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="karte" data-index="2">
+        <div class="karte-bild-wrap">
+          <div class="karte-bild bag-bg">
+            <div class="graffiti-mock">
+              <span class="gm-brand">malerlackierentun</span>
+              <span class="gm-main">VOLL<br>PSYCHOSE</span>
+              <span class="gm-sub">— JUTEBEUTEL —</span>
+            </div>
+          </div>
+          <div class="karte-badge">NEU</div>
+        </div>
+        <div class="karte-info">
+          <div class="karte-meta">
+            <span class="karte-kat">JUTEBEUTEL</span>
+            <span class="karte-nr">#003</span>
+          </div>
+          <h3>Jute Bag</h3>
+          <p class="karte-desc">naturbelassene jute. für demo, einkauf, oder einfach so. der print bleibt. der plastikbeutel nicht.</p>
+          <div class="karte-footer">
+            <span class="preis">19,99 €</span>
+            <button class="add-btn" data-name="Jute Bag" data-preis="19.99">IN DEN BAG +</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BEHIND THE SCENES -->
+  <section class="behind-section" id="behind">
+    <div class="behind-text">
+      <div class="behind-label">BEHIND THE PRINT</div>
+      <h2>SO ENTSTEHT<br>DER JUTEBEUTEL</h2>
+      <p>jedes teil wird einzeln bedruckt. kein automatisierter massendurchlauf. das sieht man — und das ist so gewollt.</p>
+      <div class="behind-tags">
+        <span>FAIR PRODUZIERT</span>
+        <span>ORGANIC COTTON</span>
+        <span>HANDARBEIT</span>
+      </div>
+    </div>
+    <div class="behind-video-wrap">
+      <video id="behind-video" class="behind-video" src="video_3.mp4" muted playsinline loop></video>
+      <button class="play-btn" id="play-btn"><span id="play-icon">▶</span></button>
+      <button class="ton-btn" id="ton-btn">🔇</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">malerlackierentun</div>
+    <div class="footer-links">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">Versand</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p class="footer-copy">© 2026 malerlackierentun</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
